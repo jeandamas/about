@@ -1,8 +1,12 @@
 :root{
+    /* Bright Mode */
     --mainbg: #DFF6FF;
     --bgcomplement:#F5F5FF;
-    --text-color:#002A44;
+    --text-color:#06283D;
     font-size: 16px;
+    --card-text:#06283D;
+
+    /* Dark Mode */
 
 }
 *{
@@ -110,8 +114,15 @@ line-height: 66px;
     color: var(--text-color);
 }
 
-.title h2{
-    color: black;
+.card-title{
+    padding-bottom: 20px;
+    font-family: 'Monaco';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 43px;
+    color: var(--dark-bg-text);
+
 }
 
 .text-content{
@@ -145,6 +156,10 @@ td{
     justify-content: center;
 }
 
+blog-img > img{
+    width: 50px;
+}
+
 .blog-box{
     display: flex;
     width: 100%;
@@ -171,17 +186,23 @@ td{
 .read-more{
     padding-top: 5px;
 }
-
-.blog-photo{
-        max-width: 100%;
-        height: auto;
+.blog-summary{
+    flex:3;
+    width: 80%;
 }
 
 .blog-poster{
-    width: 10%;
-    height: auto;
+    max-height: 100px;
+    flex:1;
 }
 
+@media only screen and (max-width: 600px) {
+    img{
+        width: 80px;
+        height: auto;
+    }
+
+}
 /* --------------- Sign in -------------- */
 
 .form-box{
@@ -222,4 +243,19 @@ input{
   .message{
     height: 3rem;
   }
+
+/* =====post===== */
+.post-container{
+    width: 80%;
+    margin: 50px auto;
+   
+}
+
+.post-image > img{
+    width: 100%;
+}
+
+
+
+
 
