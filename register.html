@@ -49,28 +49,32 @@
 
 </body>
 <script>
-    // if(localStorage.getItem('user')){
-    //     let userArray = JSON.parse(localStorage.getItem('user'));
-    //     let logusername=userObj.username;
-    //     document.getElementById('message').textContent="Hi "+logusername+" you are already logged in";
-    // }
-
     let form = document.getElementById("form")
 
     form.addEventListener('submit',(e)=>{
         e.preventDefault()
+
+        // get data from registration form
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
 
+        // create new user object
         tempUser = new User(username,password);
-        console.log(tempUser)
+
+        // stringfy new user object to store it in users array
+        let stringUser = JSON.stringify(tempUser)
+
+        // add it to the array
         users.push(tempUser)
+
+        // stringfy users array to store it in the localstorage
         let stringUsers=JSON.stringify(users)
+
+        // store stringified object stored in sreingified array
         localStorage.setItem('users',stringUsers)
-        // localStorage.setItem('username',username)
-        // localStorage.setItem('password',password)
-        // localStorage.setItem('user',JSON.stringify(user))
-        // console.log(JSON.stringify(user))
+        console.log(localStorage.getItem('users'))
+        let currentUser = tempUser.username;
+        document.getElementById('message').textContent="Hi "+currentUser+" you are already logged in";
         alert("User registered Successfuly")
         
     })
