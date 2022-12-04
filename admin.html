@@ -18,9 +18,26 @@
 <body>
     <my-header></my-header>
 
+
     <main>
+        <!-- ADD NEW BLOG POST -->
+
+            <div class="blogs-container">
+                <div class="form-box">
+                    <h2 class="card-title" id="message">Add new post</h2>
+                    <form action="" id="form">
+                        <input type="text" class="loginput" id="author" name="author" placeholder="Author" required="required" ><br><br>
+                        <input type="text" class="loginput" id="title" name="title" placeholder="Blog Title" required="required" ><br><br>
+                        <input type="text" class="loginput" id="image" name="image" placeholder="Image URL" required="required" ><br><br>
+                        <input type="text-area" class="text-area-input" id="blog-content" name="blog-content" placeholder="Type Blog Content ..." required="required" ><br><br>
+                        <button type="Post" class="btn">Submit</button>
+                    </form>
+                 
+                </div>
+            </div>
+        <!-- BLOG POSTS -->
+
         <div class="blogs-container">
-            <p class="title">Blog posts</p>
             <div class="blog-box">
                 <div class="blog-summary">
                     <h2 class="blog-title">How to host a static website on AWS s3</h2>
@@ -47,5 +64,8 @@
 
 
 </body>
+<script>
+    document.getElementById('author').value=currentUser;
+</script>
 <script src="app.js"></script>
 </html>

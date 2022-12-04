@@ -16,18 +16,7 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="signin.html">Sign in</a></li>
-            </ul>
-        </nav>
-    </header>
+    <my-header></my-header>
 
 
     <main>
@@ -73,9 +62,12 @@
         // store stringified object stored in sreingified array
         localStorage.setItem('users',stringUsers)
         console.log(localStorage.getItem('users'))
-        let currentUser = tempUser.username;
-        document.getElementById('message').textContent="Hi "+currentUser+" you are already logged in";
+        currentUser = tempUser.username;
+        document.getElementById('message').textContent="Welcome "+currentUser;
         alert("User registered Successfuly")
+        // update current user
+        localStorage.setItem('currentUser',currentUser)
+        // window.location.replace("admin.html");
         
     })
 

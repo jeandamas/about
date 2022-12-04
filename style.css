@@ -196,6 +196,8 @@ blog-img > img{
     flex:1;
 }
 
+
+
 @media only screen and (max-width: 600px) {
     img{
         width: 80px;
@@ -253,6 +255,11 @@ input{
 
 .post-image > img{
     width: 100%;
+}
+
+.text-area-input{
+    height: 150px;
+    display: block;
 }
 
 
