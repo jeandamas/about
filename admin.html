@@ -1,71 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.cdnfonts.com/css/monaco" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@600&family=Poppins:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <title>Blog | Jean Damascene Uwingeneye</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/monaco" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@600&family=Poppins:wght@300&display=swap"
-        rel="stylesheet">
-    <title>Blog | Jean Damascene Uwingeneye</title>
-</head>
+    <body>
+        <my-header></my-header>
 
-<body>
-    <my-header></my-header>
-
-
-    <main>
-        <!-- ADD NEW BLOG POST -->
+        <main>
+            <!-- ADD NEW BLOG POST -->
 
             <div class="blogs-container">
                 <div class="form-box">
                     <h2 class="card-title" id="message">Add new post</h2>
-                    <form action="" id="form">
-                        <input type="text" class="loginput" id="author" name="author" placeholder="Author" required="required" ><br><br>
-                        <input type="text" class="loginput" id="title" name="title" placeholder="Blog Title" required="required" ><br><br>
-                        <input type="text" class="loginput" id="image" name="image" placeholder="Image URL" required="required" ><br><br>
-                        <input type="text-area" class="text-area-input" id="blog-content" name="blog-content" placeholder="Type Blog Content ..." required="required" ><br><br>
+                    <form action="" id="new-post-form">
+                        <input
+                            type="text"
+                            class="loginput"
+                            id="title"
+                            name="title"
+                            placeholder="Blog Title"
+                            required="required"
+                        /><br /><br />
+                        <input
+                            type="text"
+                            class="loginput"
+                            id="image"
+                            name="image"
+                            placeholder="Image URL"
+                            required="required"
+                        /><br /><br />
+                        <input
+                            type="text-area"
+                            class="text-area-input"
+                            id="blog-content"
+                            name="blog-content"
+                            placeholder="Type Blog Content ..."
+                            required="required"
+                        /><br /><br />
                         <button type="Post" class="btn">Submit</button>
                     </form>
-                 
                 </div>
             </div>
-        <!-- BLOG POSTS -->
+            <!-- BLOG POSTS -->
 
-        <div class="blogs-container">
-            <div class="blog-box">
-                <div class="blog-summary">
-                    <h2 class="blog-title">How to host a static website on AWS s3</h2>
-                    <p class="text-content read-more"> <a href="post.html"> Read more ...</a></p>
-                    
+            <div class="blogs-container">
+                <div class="blog-box">
+                    <div class="blog-summary">
+                        <h2 class="blog-title">
+                            How to host a static website on AWS s3
+                        </h2>
+                        <p class="text-content read-more">
+                            <a href="post.html"> Read more ...</a>
+                        </p>
+                    </div>
+                    <div class="blog-img">
+                        <img src="s3.webp" alt="" class="blog-poster" />
+                    </div>
                 </div>
-                <div class="blog-img">
-                    <img src="s3.webp" alt="" class="blog-poster"> 
+
+                <div class="blog-box">
+                    <div class="blog-summary">
+                        <h2 class="blog-title">
+                            How to host a static website on AWS s3
+                        </h2>
+                        <p class="text-content read-more">
+                            <a href="post.html"> Read more ...</a>
+                        </p>
+                    </div>
+                    <div class="blog-img">
+                        <img src="/prof.png" alt="" />
+                    </div>
                 </div>
             </div>
-
-            <div class="blog-box">
-                <div class="blog-summary">
-                    <h2 class="blog-title">How to host a static website on AWS s3</h2>
-                    <p class="text-content read-more"> <a href="post.html"> Read more ...</a></p>
-                    
-                </div>
-                <div class="blog-img">
-                    <img src="/prof.png" alt=""> 
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-</body>
-<script>
-    document.getElementById('author').value=currentUser;
-</script>
-<script src="app.js"></script>
+        </main>
+    </body>
+    <script src="app.js"></script>
 </html>

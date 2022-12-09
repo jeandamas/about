@@ -1,77 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.cdnfonts.com/css/monaco" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@600&family=Poppins:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <title>Register | Jean Damascene Uwingeneye</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/monaco" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@600&family=Poppins:wght@300&display=swap"
-        rel="stylesheet">
-    <title>Register | Jean Damascene Uwingeneye</title>
-</head>
+    <body>
+        <my-header></my-header>
 
-<body>
-    <my-header></my-header>
-
-
-    <main>
-        <div class="blogs-container">
-            <div class="form-box">
-                <h2 class="card-title" id="message">Register</h2>
-                <form action="" id="form">
-                    <input type="text" class="loginput" id="username" name="username" placeholder="username" required="required" ><br><br>
-                    <input type="password" class="loginput" id="password" name="password" placeholder="password" required="required" ><br><br>
-                    <button type="submit" class="btn">Submit</button>
-                </form>
-                <br>
-                <p style="text-align: left; padding: 10px;">or</p>
-                <a href="signin.html">Sign in </a>
+        <main>
+            <div class="blogs-container">
+                <div class="form-box">
+                    <h2 class="card-title" id="message">Register</h2>
+                    <form action="" id="registration-form">
+                        <input
+                            type="text"
+                            class="loginput"
+                            id="newUsername"
+                            name="newUsername"
+                            placeholder="username"
+                            required="required"
+                            minlength="4"
+                            maxlength="8"
+                        /><br /><br />
+                        <input
+                            type="password"
+                            class="loginput"
+                            id="newPassword"
+                            name="newPassword"
+                            placeholder="password (8 character minimum)"
+                            required="required"
+                            minlength="8"
+                            maxlength="10"
+                        /><br /><br />
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <br />
+                    <p style="text-align: left; padding: 10px">or</p>
+                    <a href="signin.html">Sign in </a>
+                </div>
             </div>
-        </div>
-    </main>
-
-
-</body>
-<script>
-    let form = document.getElementById("form")
-
-    form.addEventListener('submit',(e)=>{
-        e.preventDefault()
-
-        // get data from registration form
-        let username = document.getElementById('username').value;
-        let password = document.getElementById('password').value;
-
-        // create new user object
-        tempUser = new User(username,password);
-
-        // stringfy new user object to store it in users array
-        let stringUser = JSON.stringify(tempUser)
-
-        // add it to the array
-        users.push(tempUser)
-
-        // stringfy users array to store it in the localstorage
-        let stringUsers=JSON.stringify(users)
-
-        // store stringified object stored in sreingified array
-        localStorage.setItem('users',stringUsers)
-        console.log(localStorage.getItem('users'))
-        currentUser = tempUser.username;
-        document.getElementById('message').textContent="Welcome "+currentUser;
-        alert("User registered Successfuly")
-        // update current user
-        localStorage.setItem('currentUser',currentUser)
-        // window.location.replace("admin.html");
-        
-    })
-
-    
-</script>
-<script src="app.js"></script>
+        </main>
+    </body>
+    <script src="app.js"></script>
 </html>
